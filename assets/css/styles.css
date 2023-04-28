@@ -5,6 +5,7 @@
 :root {
     --primary-color: #143c3c;
     --secondary-color: #e2eddf;
+    --text-color: #152427;
 }
 
 html,
@@ -84,7 +85,7 @@ a {
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.12;
-    color: #152427;
+    color: var(--text-color);
 }
 
 .section-sub-heading::before {
@@ -95,14 +96,14 @@ a {
     display: inline-block;
     width: 25px;
     height: 1px;
-    background: #152427;
+    background: var(--text-color);
 }
 
 .section-heading {
     font-weight: 600;
     font-size: 4.2rem;
     line-height: 1.24;
-    color: #152427;
+    color: var(--text-color);
 }
 
 .section-desc {
@@ -182,7 +183,7 @@ a {
 
 .navbar__link--active,
 .navbar__link:hover {
-    color: #152427;
+    color: var(--text-color);
 }
 
 .header-cta {
@@ -207,7 +208,7 @@ a {
     font-weight: 800;
     font-size: 5rem;
     line-height: 1.2;
-    color: #152427;
+    color: var(--text-color);
 }
 
 .hero__desc {
@@ -260,7 +261,7 @@ a {
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1.67;
-    color: #152427;
+    color: var(--text-color);
 }
 
 .hero__images {
@@ -404,7 +405,7 @@ a {
     display: inline-block;
     width: 66px;
     height: 2px;
-    background: #152427;
+    background: var(--text-color);
 }
 
 .service__cta {
@@ -421,7 +422,7 @@ a {
     width: 54px;
     height: 54px;
     border-radius: 50%;
-    color: #152427;
+    color: var(--text-color);
     background-color: var(--secondary-color);
     transition: all ease 0.25s;
     cursor: pointer;
@@ -471,7 +472,7 @@ a {
     font-weight: 600;
     font-size: 2.2rem;
     line-height: 1;
-    color: #152427;
+    color: var(--text-color);
 }
 
 .service-item__desc {
@@ -551,7 +552,7 @@ a {
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 1;
-    color: #152427;
+    color: var(--text-color);
 }
 
 .about-designers__desc {
@@ -571,7 +572,7 @@ a {
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.4;
-    color: #152427;
+    color: var(--text-color);
 }
 
 .about-designers__value::before {
@@ -605,7 +606,7 @@ a {
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.4;
-    color: #152427;
+    color: var(--text-color);
     text-align: right;
 }
 
@@ -613,7 +614,7 @@ a {
     width: 12px;
     height: 12px;
     border: 3px solid #eaeaea;
-    background: #143c3c;
+    background: var(--primary-color);
     border-radius: 50%;
 }
 
@@ -629,7 +630,7 @@ a {
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.4;
-    color: #152427;
+    color: var(--text-color);
 }
 
 .about-designers__images {
@@ -688,7 +689,7 @@ a {
     font-weight: 600;
     font-size: 4.2rem;
     line-height: 1.24;
-    color: #152427;
+    color: var(--text-color);
 }
 
 .about-item__text {
@@ -696,5 +697,96 @@ a {
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 1.71;
+    color: #7d8188;
+}
+
+/* ==================== Process ==================== */
+.process {
+    padding: 36px 0;
+}
+
+.process__heading {
+    width: 477px;
+    margin-top: 20px;
+}
+
+.process__list {
+    margin-top: 81px;
+}
+
+.process-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 57px 30px 50px;
+    border-radius: 33px;
+    transition: all ease 0.25s;
+}
+
+.process-item--more {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.process-gap--1 {
+    column-gap: 64px;
+}
+
+.process-gap--2 {
+    column-gap: 49px;
+}
+
+.process-gap--3 {
+    column-gap: 47px;
+}
+
+.process-item:hover {
+    background: #e2eddf;
+}
+
+.process-item__number {
+    font-weight: 600;
+    font-size: 7.2rem;
+    line-height: 0.72;
+    color: #143c3c;
+}
+
+.process-item__content {
+    display: flex;
+    align-items: center;
+}
+
+.process-item__img {
+    position: absolute;
+    right: 92px;
+    bottom: 0;
+    width: 450px;
+    height: 444px;
+    object-fit: cover;
+}
+
+.process-item__title {
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 1;
+    color: #152427;
+}
+
+.process-item__link {
+    margin-top: 7px;
+    margin-left: 159px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #575d5e;
+}
+
+.process-item__desc {
+    width: 572px;
+    margin-left: auto;
+    margin-right: 41px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.56;
     color: #7d8188;
 }
