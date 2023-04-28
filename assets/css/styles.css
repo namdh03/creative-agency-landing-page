@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #143c3c;
+    --secondary-color: #83a17d;
+}
+
 html,
 body {
     scroll-behavior: smooth;
@@ -31,6 +36,8 @@ a {
 
 .btn {
     --height: 57px;
+    display: inline-block;
+    padding: 0 16px;
     min-width: 173px;
     height: var(--height);
     line-height: var(--height);
@@ -38,14 +45,29 @@ a {
     font-size: 1.8rem;
     text-align: center;
     color: #ffffff;
-    background: #143c3c;
-    border: 1.5px solid #143c3c;
+    background: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
     border-radius: 40px;
     transition: all ease 0.25s;
 }
 
 .btn:hover {
     opacity: 0.9;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp--2 {
+    --line-clamp: 2;
+}
+
+.line-clamp--3 {
+    --line-clamp: 3;
 }
 
 /* ==================== Header ==================== */
@@ -106,7 +128,7 @@ a {
     display: inline-block;
     width: 0;
     height: 2px;
-    background: #143c3c;
+    background: var(--primary-color);
     transition: all ease 0.25s;
 }
 
@@ -123,4 +145,135 @@ a {
 
 .header-cta {
     margin-left: 88px;
+}
+
+/* ==================== Hero ==================== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.hero__content {
+    flex-shrink: 0;
+    width: 35%;
+}
+
+.hero__heading {
+    width: 368px;
+    font-weight: 800;
+    font-size: 5rem;
+    line-height: 1.2;
+    color: #152427;
+}
+
+.hero__desc {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.56;
+    color: #575d5e;
+}
+
+.hero-watch {
+    display: flex;
+    align-items: center;
+    margin-top: 42px;
+}
+
+.hero-watch__link {
+    display: flex;
+    align-items: center;
+    margin-left: 43px;
+}
+
+.hero-watch__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #83a17d;
+    border-radius: 50%;
+}
+
+.hero-watch__icon::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    border-top-color: #fff;
+    border-right-color: #fff;
+    transform: rotate(40deg);
+}
+
+.hero-watch__text {
+    font-family: "Poppins", sans-serif;
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #152427;
+}
+
+.hero__images {
+    position: relative;
+    display: flex;
+}
+
+.hero__images::after {
+    position: absolute;
+    top: 122px;
+    left: 156px;
+    z-index: -1;
+    content: "";
+    display: inline-block;
+    width: 340px;
+    height: 340px;
+    background: #4dbb9a;
+    filter: blur(137px);
+}
+
+.hero-decoration {
+    position: absolute;
+}
+
+.hero-decoration--top {
+    top: -32px;
+    left: -172px;
+}
+
+.hero-decoration__circle--top {
+    position: absolute;
+    top: 8px;
+    left: -42px;
+}
+
+.hero__img {
+    margin-right: 20px;
+    width: 202px;
+    height: 466px;
+    object-fit: cover;
+    border-radius: 110px;
+}
+
+.hero__img--middle {
+    position: relative;
+    bottom: -77px;
+}
+
+.hero-decoration--bottom {
+    bottom: -145px;
+    left: 31px;
+}
+
+.hero-decoration__circle--bottom {
+    position: absolute;
+    right: -43px;
+    bottom: 28px;
 }
