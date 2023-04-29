@@ -538,18 +538,26 @@
                     </h2>
 
                     <ol class="process__list">
-                        <li class="process-item process-item--more">
-                            <div class="process-item__content process-gap--1">
-                                <strong class="process-item__number">
-                                    01.
-                                </strong>
+                        <li class="process-item">
+                            <strong class="process-item__number"> 01. </strong>
+                            <div class="process-item__content">
                                 <h3 class="process-item__title">
                                     Project idea
                                 </h3>
+
+                                <a href="#!" class="process-item__link">
+                                    Learn More
+                                </a>
                             </div>
-                            <a href="#!" class="process-item__link"
-                                >Learn More</a
+                            <p
+                                class="process-item__desc process-item__desc--hide line-clamp line-clamp--3"
                             >
+                                We customse a ensure aligment and difine key
+                                mileones and defiverables experience tells us
+                                the best solutions are the ones deated with
+                                clients.
+                            </p>
+
                             <img
                                 src="./assets/img/process.png"
                                 alt=""
@@ -557,13 +565,14 @@
                             />
                         </li>
                         <li class="process-item">
-                            <div class="process-item__content process-gap--2">
-                                <strong class="process-item__number">
-                                    02.
-                                </strong>
+                            <strong class="process-item__number"> 02. </strong>
+                            <div class="process-item__content">
                                 <h3 class="process-item__title">
                                     Brainstorming
                                 </h3>
+                                <a href="#!" class="process-item__link">
+                                    Learn More
+                                </a>
                             </div>
                             <p
                                 class="process-item__desc line-clamp line-clamp--3"
@@ -575,11 +584,13 @@
                             </p>
                         </li>
                         <li class="process-item">
-                            <div class="process-item__content process-gap--3">
-                                <strong class="process-item__number">
-                                    03.
-                                </strong>
+                            <strong class="process-item__number"> 03. </strong>
+                            <div class="process-item__content">
                                 <h3 class="process-item__title">Execution</h3>
+
+                                <a href="#!" class="process-item__link">
+                                    Learn More
+                                </a>
                             </div>
                             <p
                                 class="process-item__desc line-clamp line-clamp--3"
@@ -593,6 +604,85 @@
                     </ol>
                 </div>
             </section>
+
+            <!-- Projects -->
+            <section class="project">
+                <div class="container">
+                    <div class="project__inner">
+                        <section class="project__content">
+                            <h2
+                                class="section-heading project__content-heading"
+                            >
+                                A quick glance of our past projects
+                            </h2>
+                            <div class="project__content-more">
+                                <p class="project__content-desc">
+                                    Are you strive for the fast project
+                                    simplicity and clarity. Great design is born
+                                    of those two things.
+                                </p>
+                                <a href="#!" class="project__content-link">
+                                    <span>Browse all Projects</span>
+                                    <svg
+                                        class="project__content-icon"
+                                        width="22"
+                                        height="13"
+                                        viewBox="0 0 22 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M1 6.29412H21M21 6.29412L15.7059 1M21 6.29412L15.7059 11"
+                                            stroke="currentColor"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="section-decoration project__decoration">
+                                <img
+                                    src="./assets/icons/circle.svg"
+                                    alt=""
+                                    class="section-icon section-icon--circle project__icon project__icon--circle"
+                                />
+                                <img
+                                    src="./assets/icons/line.svg"
+                                    alt=""
+                                    class="section-icon section-icon--line project__icon project__icon--line"
+                                />
+                            </div>
+                        </section>
+
+                        <figure class="project__media">
+                            <video
+                                src="./assets/video/lofi.mp4"
+                                class="project__media-video"
+                            ></video>
+                            <div class="project__media-icon">
+                                <img
+                                    src="./assets/icons/play.svg"
+                                    alt=""
+                                    width="36px"
+                                    height="36px"
+                                />
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </section>
         </main>
+
+        <script>
+            let pMediaVideo = document.querySelector(".project__media-video");
+            let pMediaIcon = document.querySelector(".project__media-icon");
+
+            pMediaIcon.onclick = function () {
+                pMediaVideo.play();
+                pMediaIcon.style.display = "none";
+            };
+        </script>
     </body>
 </html>

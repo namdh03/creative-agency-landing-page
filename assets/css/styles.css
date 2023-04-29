@@ -694,8 +694,20 @@ a {
 }
 
 .process__heading {
+    position: relative;
     width: 477px;
     margin-top: 20px;
+}
+
+.process__heading::after {
+    position: absolute;
+    right: -9px;
+    bottom: 18px;
+    content: "";
+    display: inline-block;
+    width: 66px;
+    height: 2px;
+    background: var(--text-color);
 }
 
 .process__list {
@@ -703,33 +715,47 @@ a {
 }
 
 .process-item {
-    position: relative;
     display: flex;
     align-items: center;
+    position: relative;
     padding: 57px 30px 50px;
     border-radius: 33px;
     transition: all ease 0.25s;
 }
 
-.process-item--more {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.process-gap--1 {
-    column-gap: 64px;
-}
-
-.process-gap--2 {
-    column-gap: 49px;
-}
-
-.process-gap--3 {
-    column-gap: 47px;
+.process-item::after {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    content: "";
+    display: inline-block;
+    width: 1131px;
+    height: 3px;
+    background: linear-gradient(
+        180deg,
+        #83a17d 4.17%,
+        rgba(131, 161, 125, 0) 36.46%
+    );
 }
 
 .process-item:hover {
     background: var(--secondary-color);
+}
+
+.process-item:hover::after {
+    visibility: hidden;
+}
+
+.process-item:hover .process-item__link {
+    visibility: visible;
+}
+
+.process-item:hover .process-item__desc--hide {
+    visibility: hidden;
+}
+
+.process-item:hover .process-item__img {
+    visibility: visible;
 }
 
 .process-item__number {
@@ -741,10 +767,25 @@ a {
 
 .process-item__content {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-self: flex-end;
+    margin-left: 64px;
+}
+
+.process-item:first-child .process-item__content {
+    margin-left: 64px;
+}
+
+.process-item:nth-child(2) .process-item__content {
+    margin-left: 49px;
+}
+
+.process-item:last-child .process-item__content {
+    margin-left: 47px;
 }
 
 .process-item__img {
+    visibility: hidden;
     position: absolute;
     right: 92px;
     bottom: 0;
@@ -761,12 +802,14 @@ a {
 }
 
 .process-item__link {
-    margin-top: 7px;
-    margin-left: 159px;
+    margin-top: 22px;
+    display: inline-block;
+    visibility: hidden;
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 1;
     color: #575d5e;
+    text-decoration: underline;
 }
 
 .process-item__desc {
@@ -777,4 +820,101 @@ a {
     font-size: 1.8rem;
     line-height: 1.56;
     color: #7d8188;
+}
+
+/* ==================== Projects ==================== */
+.project {
+    margin-top: 112px;
+    padding: 116px 130px 63px;
+    background-color: var(--primary-color);
+}
+
+.project__inner {
+    position: relative;
+}
+
+.project__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 93px;
+}
+
+.project__content-heading {
+    position: relative;
+    flex-shrink: 0;
+    width: 457px;
+    color: #e7f9f9;
+}
+
+.project__content-heading::after {
+    position: absolute;
+    bottom: 20px;
+    right: 97px;
+    content: "";
+    display: inline-block;
+    width: 66px;
+    height: 2px;
+    background: #83a17d;
+}
+
+.project__content-desc {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.56;
+    color: #6a8383;
+}
+
+.project__content-link {
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+    margin-top: 13px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.56;
+    color: #ffffff;
+}
+
+.project__content-icon {
+    color: #80a07b;
+}
+
+.project__media {
+    position: relative;
+}
+
+.project__media-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 118px;
+    height: 118px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.project__media-video {
+    width: 100%;
+    object-fit: cover;
+    margin-top: 65px;
+    border-radius: 22px;
+}
+
+.project__decoration {
+    top: 55px;
+    right: -160px;
+    transform: matrix(-0.2, -0.98, -0.98, 0.2, 0, 0);
+    z-index: 1;
+}
+
+.project__icon--circle {
+    position: absolute;
+    left: 310px;
+    top: 0px;
 }
