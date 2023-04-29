@@ -79,6 +79,16 @@ a {
     --line-clamp: 3;
 }
 
+.section-decoration {
+    position: absolute;
+}
+
+.section-icon--circle {
+    position: absolute;
+    left: -42px;
+    top: 8px;
+}
+
 .section-sub-heading {
     position: relative;
     padding-left: 46px;
@@ -269,6 +279,17 @@ a {
     display: flex;
 }
 
+.hero__decoration--top {
+    top: -32px;
+    left: -172px;
+}
+
+.hero__decoration--bottom {
+    bottom: -150px;
+    left: 40px;
+    transform: rotate(175.95deg);
+}
+
 .hero__images::after {
     position: absolute;
     top: 122px;
@@ -282,21 +303,6 @@ a {
     filter: blur(137px);
 }
 
-.hero-decoration {
-    position: absolute;
-}
-
-.hero-decoration--top {
-    top: -32px;
-    left: -172px;
-}
-
-.hero-decoration__circle--top {
-    position: absolute;
-    top: 8px;
-    left: -42px;
-}
-
 .hero__img {
     margin-right: 20px;
     width: 202px;
@@ -308,17 +314,6 @@ a {
 .hero__img--middle {
     position: relative;
     bottom: -77px;
-}
-
-.hero-decoration--bottom {
-    bottom: -145px;
-    left: 31px;
-}
-
-.hero-decoration__circle--bottom {
-    position: absolute;
-    right: -43px;
-    bottom: 28px;
 }
 
 /* ==================== Brand ==================== */
@@ -519,16 +514,9 @@ a {
 }
 
 .about__decoration {
-    position: absolute;
-    top: 22px;
-    left: 50px;
+    top: 0;
+    right: 0;
     transform: rotate(12.64deg);
-}
-
-.about__decoration-circle {
-    position: absolute;
-    top: 5px;
-    left: -44px;
 }
 
 .about-designers {
@@ -741,14 +729,14 @@ a {
 }
 
 .process-item:hover {
-    background: #e2eddf;
+    background: var(--secondary-color);
 }
 
 .process-item__number {
     font-weight: 600;
     font-size: 7.2rem;
     line-height: 0.72;
-    color: #143c3c;
+    color: var(--primary-color);
 }
 
 .process-item__content {
@@ -769,7 +757,7 @@ a {
     font-weight: 600;
     font-size: 2.2rem;
     line-height: 1;
-    color: #152427;
+    color: var(--text-color);
 }
 
 .process-item__link {
